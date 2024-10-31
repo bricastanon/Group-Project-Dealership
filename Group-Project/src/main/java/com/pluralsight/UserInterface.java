@@ -20,9 +20,8 @@ public class UserInterface {
     // Display menu
     public void display() {
         //Scanner scanner = new Scanner(System.in)
-        System.out.println("Welcome to the Car Dealership App!");
-        System.out.println("********************************************");
-        System.out.println("Please select an option from the menu below:");
+        System.out.println("Welcome! Please select an option: ");
+        System.out.println("--------------------------------- ");
         int choice;
         do {
             System.out.println("1. Find vehicles by price range");
@@ -35,7 +34,7 @@ public class UserInterface {
             System.out.println("8. Add a vehicle");
             System.out.println("9. Remove a vehicle");
             System.out.println("0. Quit");
-            System.out.println("********************************************");
+            System.out.println("----------------------------------------------- ");
             System.out.println("Enter your choice: ");
             choice = scanner.nextInt();
 
