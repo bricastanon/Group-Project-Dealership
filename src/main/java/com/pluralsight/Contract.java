@@ -1,43 +1,38 @@
 package com.pluralsight;
 public abstract class Contract {
-    protected String dateOfContract;
+    // Abstract class cannot instantiate objects
+    protected String date;
     protected String customerName;
     protected String customerEmail;
-    protected Vehicle vehicle; // Change from String to Vehicle
+    protected String vehicleSold;
     protected double totalPrice;
     protected double monthlyPayment;
 
-    public Contract(String dateOfContract, String customerName, String customerEmail, Vehicle vehicle) {
-        this.dateOfContract = dateOfContract;
+    public Contract(String date, String customerName, String customerEmail, String vehicleSold) {
+        this.date = date;
         this.customerName = customerName;
         this.customerEmail = customerEmail;
-        this.vehicle = vehicle;
+        this.vehicleSold = vehicleSold;
     }
-
-    public String getDateOfContract() { return dateOfContract;
+    // Getters and setters
+    public String getDate() { return date;
     }
-
-    public void setDateOfContract(String dateOfContract) { this.dateOfContract = dateOfContract;
+    public void setDate(String date) { this.date = date;
     }
-
     public String getCustomerName() { return customerName;
     }
-
     public void setCustomerName(String customerName) { this.customerName = customerName;
     }
-
     public String getCustomerEmail() { return customerEmail;
     }
-
     public void setCustomerEmail(String customerEmail) { this.customerEmail = customerEmail;
     }
-
-    public Vehicle getVehicle() { return vehicle;
+    public String getVehicleSold() { return vehicleSold;
     }
-
-    public void setVehicle(Vehicle vehicle) { this.vehicle = vehicle;
+    public void setVehicleSold(String vehicleSold) { this.vehicleSold = vehicleSold;
     }
-
+    // Abstract methods
     public abstract double getTotalPrice();
     public abstract double getMonthlyPayment();
 }
+
