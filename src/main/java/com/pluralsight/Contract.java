@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class Contract {
+public abstract class Contract {
 
     // is an abstract class
     // abstract classes can't instantiate objects
@@ -11,6 +11,22 @@ public class Contract {
     protected double totalPrice;
     protected double monthlyPayment;
 
+    public Contract(String _date, String _customerName, String _customerEmail, String _vehicleSold) {
+        this.date = _date;
+        this.customerName = _customerName;
+        this.customerEmail = _customerEmail;
+        this.vehicleSold = _vehicleSold;
+    }
+
+    // abstract methods
+    public double getMonthlyPayment() {
+        return monthlyPayment;
+    }
+
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
 
     // getters and setters
     public String getDate() {
