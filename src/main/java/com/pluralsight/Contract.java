@@ -7,26 +7,22 @@ public abstract class Contract {
     protected String date;
     protected String customerName;
     protected String customerEmail;
-    protected String vehicleSold;
+    protected int vin;
     protected double totalPrice;
     protected double monthlyPayment;
 
-    public Contract(String _date, String _customerName, String _customerEmail, String _vehicleSold) {
+    public Contract(String _date, String _customerName, String _customerEmail, int _vin) {
         this.date = _date;
         this.customerName = _customerName;
         this.customerEmail = _customerEmail;
-        this.vehicleSold = _vehicleSold;
+        this.vin = _vin;
     }
 
     // abstract methods
-    public double getMonthlyPayment() {
-        return monthlyPayment;
-    }
+    public abstract double getMonthlyPayment();
 
 
-    public double getTotalPrice() {
-        return totalPrice;
-    }
+    public abstract double getTotalPrice();
 
     // getters and setters
     public String getDate() {
@@ -50,10 +46,10 @@ public abstract class Contract {
         this.customerEmail = customerEmail;
     }
 
-    public String getVehicleSold() {
-        return vehicleSold;
+    public int getVehicleSold() {
+        return vin;
     }
-    public void setVehicleSold(String vehicleSold) {
-        this.vehicleSold = vehicleSold;
+    public void setvin(int vin) {
+        this.vin = vin;
     }
 }
