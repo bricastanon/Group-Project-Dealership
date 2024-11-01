@@ -31,7 +31,7 @@ public class LeaseContract extends Contract{
     @Override
     public double getTotalPrice(Vehicle vehicle) {
         //total price = getLeaseFee()( which is og price + lease fee) + getExpectedEndingValue + getMonthlyPayment();
-        this.totalPrice = 5
+        this.totalPrice = 5;
 
         return this.totalPrice;
     }
