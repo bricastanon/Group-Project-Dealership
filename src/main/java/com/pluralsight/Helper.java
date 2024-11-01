@@ -9,4 +9,10 @@ public class Helper {
         String formattedTime = currentTime.format(formatter);
         System.out.println("Current Time: " + formattedTime);
     }
+
+    public static void addAseperationLine() {
+        System.out.println("-----------------------------------------------");
+    }
+
+    
 }
