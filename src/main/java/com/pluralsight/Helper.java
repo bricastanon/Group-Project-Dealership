@@ -14,5 +14,7 @@ public class Helper {
         System.out.println("-----------------------------------------------");
     }
 
-    
+    public static void presseAbuttonToContinue() {
+        System.out.println("Press a button to continue");
+    }
 }
