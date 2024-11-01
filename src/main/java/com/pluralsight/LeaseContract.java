@@ -6,12 +6,12 @@ public class LeaseContract extends Contract{
     }
 
     @Override
-    public double getMonthlyPayment() {
+    public double getMonthlyPayment(Vehicle vehicle) {
         return 0;
     }
 
     @Override
-    public double getTotalPrice() {
+    public double getTotalPrice(Vehicle vehicle) {
         return 0;
     }
 }

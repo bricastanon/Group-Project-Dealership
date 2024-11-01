@@ -19,10 +19,9 @@ public abstract class Contract {
     }
 
     // abstract methods
-    public abstract double getMonthlyPayment();
+    public abstract double getMonthlyPayment(Vehicle vehicle);
 
-
-    public abstract double getTotalPrice();
+    public abstract double getTotalPrice(Vehicle vehicle);
 
     // getters and setters
     public String getDate() {
