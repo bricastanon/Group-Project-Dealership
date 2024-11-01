@@ -4,7 +4,7 @@ public abstract class Contract {
     protected String date;
     protected String customerName;
     protected String customerEmail;
-    protected String vehicleSold;
+    protected String vehicleSold; // VIN
     protected double totalPrice;
     protected double monthlyPayment;
 

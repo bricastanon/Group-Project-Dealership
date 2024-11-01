@@ -36,15 +36,12 @@ public class Main {
         Vehicle vehicle = new Vehicle(1, make, model, year, color, mileage, type, price);  // Assuming '1' as an example ID
         System.out.print("Is it a sale or lease? (S/L): ");
         String saleOrLease = scanner.nextLine().toUpperCase();
-
         if (saleOrLease.equals("S")) {
             System.out.print("Is the vehicle financed? (yes/no): ");
             boolean isFinanced = scanner.nextLine().equalsIgnoreCase("yes");
-
             SalesContract salesContract = new SalesContract(date, customerName, customerEmail, vehicle.toString(), 0.05, 100, price < 10000 ? 295 : 495, isFinanced);
-
             try {
-                FileUtils.writeContractToFile("contracts.txt", salesContract);
+                ContractFileManager.writeContractToFile("********.txt", salesContract); // find out file name*****
                 System.out.println("Sales contract recorded successfully.");
             } catch (IOException e) {
                 e.printStackTrace();
