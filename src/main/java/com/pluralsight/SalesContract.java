@@ -39,8 +39,7 @@ public class SalesContract extends Contract {
         return vehicleCost + (vehicleCost * salesTaxRate) + recordingFee + processingFee;
     }
     @Override
-    public double getMonthlyPayment() {
-        return monthlyPayment;
+    public double getMonthlyPayment() { return monthlyPayment;
     }
     private double calculateMonthlyPayment() {
         if (!finance) {

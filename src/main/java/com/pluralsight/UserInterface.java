@@ -1,4 +1,5 @@
 package com.pluralsight;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -175,6 +176,7 @@ public class UserInterface {
         int vehicleId = scanner.nextInt();
         dealership.removeVehicle(vehicleId);
     }
+
 
 }
 
