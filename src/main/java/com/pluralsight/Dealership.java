@@ -65,6 +65,8 @@ public class Dealership {
         inventory.removeIf(vehicle -> vehicle.getId() == vehicleId);
     }
 
+    public void sellOrLeaseVehicle()
+
 }
 
 

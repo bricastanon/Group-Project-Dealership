@@ -33,6 +33,7 @@ public class UserInterface {
             System.out.println("7. List ALL vehicles");
             System.out.println("8. Add a vehicle");
             System.out.println("9. Remove a vehicle");
+            System.out.println("10. Sell or lease a vehicle");
             System.out.println("0. Quit");
             System.out.println("------------------");
             System.out.println("Enter your choice: ");
@@ -65,6 +66,9 @@ public class UserInterface {
                     break;
                 case 9:
                     processRemoveVehicle();
+                    break;
+                case 10:
+                    processSellOrLeaseVehicle();
                     break;
                 case 0:
                     System.out.println("Exiting...");
@@ -175,6 +179,39 @@ public class UserInterface {
         int vehicleId = scanner.nextInt();
         dealership.removeVehicle(vehicleId);
     }
+    public void processSellOrLeaseVehicle(){
+        System.out.println("Sale or Lease?: ");
+        String saleOrLease = scanner.next().toUpperCase();
+        scanner.nextLine();
 
+        System.out.println("Enter your name: ");
+        String customerName = scanner.nextLine();
+
+        System.out.println("Enter your email: ");
+
+        System.out.println("Enter VIN: ");
+
+        System.out.println("Enter vehicle year: ");
+
+        System.out.println("Enter vehicle make: ");
+
+        System.out.println("Enter vehicle model: ");
+
+        System.out.print("Enter vehicle type (e.g., SUV, truck, sedan): ");
+        String vehicleType = scanner.nextLine();
+
+        System.out.print("Enter vehicle color: ");
+        String color = scanner.nextLine();
+
+        System.out.print("Enter mileage: ");
+        int mileage = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Enter original price of the vehicle: ");
+        double originalPrice = Double.parseDouble(scanner.nextLine());
+
+
+        dealership.sellOrLeaseVehicle();
+
+    }
 }
 
